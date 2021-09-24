@@ -10,8 +10,8 @@ namespace ShioajiConsole
 
         static void Main(string[] args)
         {
-            MyClass mc = new MyClass();
-            mc.Login();
+            MyApi ma = new MyApi();
+            ma.Login();
 
             string command = "";
 
@@ -35,28 +35,25 @@ namespace ShioajiConsole
                     case "history":
                         if(commands.Length >= 2)
                         {
-                            Console.WriteLine(mc.getHistoricalMarketData("2330", commands[1]));
+                            Console.WriteLine(ma.getHistoricalMarketData(commands.Length > 2 ? commands[1] : "2330", commands[1]));
                         }
                         else
                         {
-                            Console.WriteLine(mc.getHistoricalMarketData("2330", DateTime.Now.ToString("yyyy-MM-dd")));
+                            Console.WriteLine(ma.getHistoricalMarketData(commands.Length > 2 ? commands[1] : "2330", DateTime.Now.ToString("yyyy-MM-dd")));
                         }
+                        break;
+                    case "streaming":
+                        ma.getStreaming(commands.Length > 2 ? commands[1] : "2330");
+                        System.Threading.Thread.Sleep(5000);
                         break;
                     default:
                         break;
                 }
-            }
-            
-
-
-
-
-            Console.ReadLine();
+            }           
         }
-
     }
 
-    public class MyClass
+    public class MyApi
     {
         private static Shioaji _api = new Shioaji();
         private static SJList _accounts;
@@ -71,6 +68,24 @@ namespace ShioajiConsole
             var contract = _api.Contracts.Stocks[type][stockCode];
             Ticks ticks = _api.Ticks(contract, date);
             return ticks;
+        }
+
+        public void getStreaming(string stockCode, string type = "TSE")
+        {
+            _api.SetQuoteCallback(myCB);
+            _api.Subscribe(_api.Contracts.Stocks[type][stockCode], QuoteType.tick);
+            System.Threading.Thread.Sleep(5000);
+        }
+
+        private static void myCB(string topic, Dictionary<string, dynamic> msg)
+        {
+            Console.WriteLine("topic: " + topic);
+            foreach (var item in msg)
+            {
+                Console.WriteLine(item.Key + ": " + item.Value);
+            }
+
+            Console.WriteLine("-----------------------------------");
         }
     }
 }
