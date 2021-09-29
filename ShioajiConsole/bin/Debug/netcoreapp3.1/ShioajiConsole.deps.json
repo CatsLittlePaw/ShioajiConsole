@@ -9,7 +9,8 @@
       "ShioajiConsole/1.0.0": {
         "dependencies": {
           "Shioaji": "0.0.6-dev6",
-          "System.Configuration.ConfigurationManager": "5.0.0"
+          "System.Configuration.ConfigurationManager": "5.0.0",
+          "log4net": "2.0.12"
         },
         "runtime": {
           "ShioajiConsole.dll": {}
@@ -26,6 +27,17 @@
           "lib/netcoreapp2.1/Apache.Arrow.dll": {
             "assemblyVersion": "0.14.1.0",
             "fileVersion": "0.14.1.0"
+          }
+        }
+      },
+      "log4net/2.0.12": {
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "5.0.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {
+            "assemblyVersion": "2.0.12.0",
+            "fileVersion": "2.0.12.0"
           }
         }
       },
@@ -434,6 +446,13 @@
       "sha512": "sha512-no9kV8l0u+oMm+eCH43Vhcs2V7jjzYqcBdEtcQlRWlKwMrJrPNAErVFmALYbn+X+t3d6JwwfSl3vNM2R6yRIzQ==",
       "path": "apache.arrow/0.14.1",
       "hashPath": "apache.arrow.0.14.1.nupkg.sha512"
+    },
+    "log4net/2.0.12": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9P67BCftJ7KG+B7rNOM1A9KczUwyEDed6zbAddy5Cj/73xVkzi+rEAHeOgUnW5wDqy1JFlY8+oTP0m1PgJ03Tg==",
+      "path": "log4net/2.0.12",
+      "hashPath": "log4net.2.0.12.nupkg.sha512"
     },
     "MessagePack/2.2.60": {
       "type": "package",

@@ -129,3 +129,4 @@ C:\ShioajiConsole\ShioajiConsole\obj\Debug\netcoreapp3.1\ShioajiConsole.dll
 C:\ShioajiConsole\ShioajiConsole\obj\Debug\netcoreapp3.1\ShioajiConsole.pdb
 C:\ShioajiConsole\ShioajiConsole\obj\Debug\netcoreapp3.1\ShioajiConsole.genruntimeconfig.cache
 C:\ShioajiConsole\ShioajiConsole\bin\Debug\netcoreapp3.1\ShioajiConsole.dll.config
+D:\SVN\BatchJob\ShioajiConsole\ShioajiConsole\bin\Debug\netcoreapp3.1\log4net.dll

@@ -17,6 +17,18 @@
           "lib/netcoreapp2.1/Apache.Arrow.dll": {}
         }
       },
+      "log4net/2.0.12": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/log4net.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/log4net.dll": {}
+        }
+      },
       "MessagePack/2.2.60": {
         "type": "package",
         "dependencies": {
@@ -493,6 +505,34 @@
         "apache.arrow.nuspec",
         "lib/netcoreapp2.1/Apache.Arrow.dll",
         "lib/netstandard1.3/Apache.Arrow.dll"
+      ]
+    },
+    "log4net/2.0.12": {
+      "sha512": "9P67BCftJ7KG+B7rNOM1A9KczUwyEDed6zbAddy5Cj/73xVkzi+rEAHeOgUnW5wDqy1JFlY8+oTP0m1PgJ03Tg==",
+      "type": "package",
+      "path": "log4net/2.0.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net20/log4net.dll",
+        "lib/net20/log4net.xml",
+        "lib/net35-client/log4net.dll",
+        "lib/net35-client/log4net.xml",
+        "lib/net35/log4net.dll",
+        "lib/net35/log4net.xml",
+        "lib/net40-client/log4net.dll",
+        "lib/net40-client/log4net.xml",
+        "lib/net40/log4net.dll",
+        "lib/net40/log4net.xml",
+        "lib/net45/log4net.dll",
+        "lib/net45/log4net.xml",
+        "lib/netstandard1.3/log4net.dll",
+        "lib/netstandard1.3/log4net.xml",
+        "lib/netstandard2.0/log4net.dll",
+        "lib/netstandard2.0/log4net.xml",
+        "log4net.2.0.12.nupkg.sha512",
+        "log4net.nuspec",
+        "package-icon.png"
       ]
     },
     "MessagePack/2.2.60": {
@@ -1482,30 +1522,30 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Shioaji >= 0.0.6-dev6",
-      "System.Configuration.ConfigurationManager >= 5.0.0"
+      "System.Configuration.ConfigurationManager >= 5.0.0",
+      "log4net >= 2.0.12"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\chris_liao\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\Christian\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\ShioajiConsole\\ShioajiConsole\\ShioajiConsole.csproj",
+      "projectUniqueName": "D:\\SVN\\BatchJob\\ShioajiConsole\\ShioajiConsole\\ShioajiConsole.csproj",
       "projectName": "ShioajiConsole",
-      "projectPath": "C:\\ShioajiConsole\\ShioajiConsole\\ShioajiConsole.csproj",
-      "packagesPath": "C:\\Users\\chris_liao\\.nuget\\packages\\",
-      "outputPath": "C:\\ShioajiConsole\\ShioajiConsole\\obj\\",
+      "projectPath": "D:\\SVN\\BatchJob\\ShioajiConsole\\ShioajiConsole\\ShioajiConsole.csproj",
+      "packagesPath": "C:\\Users\\Christian\\.nuget\\packages\\",
+      "outputPath": "D:\\SVN\\BatchJob\\ShioajiConsole\\ShioajiConsole\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\chris_liao\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\Christian\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -1539,6 +1579,10 @@
           "System.Configuration.ConfigurationManager": {
             "target": "Package",
             "version": "[5.0.0, )"
+          },
+          "log4net": {
+            "target": "Package",
+            "version": "[2.0.12, )"
           }
         },
         "imports": [
@@ -1556,7 +1600,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }
